@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import { Route ,Switch,Redirect} from 'react-router-dom';
+import { Route ,Switch} from 'react-router-dom';
 import Login from  './Pages/login'  
 import Admin from './Pages/admin'
 import './App.less';

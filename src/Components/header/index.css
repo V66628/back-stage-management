@@ -1,0 +1,40 @@
+.header {
+  height: 80px;
+  background-color: white;
+}
+.header .header-top {
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  border-bottom: 1px solid green;
+  text-align: right;
+}
+.header .header-bottom {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+}
+.header .header-bottom .header-bottom-left {
+  width: 25%;
+  font-size: 24px;
+  text-align: center;
+  position: relative;
+}
+.header .header-bottom .header-bottom-left::after {
+  content: "";
+  border-top: 20px solid white;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header .header-bottom .header-bottom-right {
+  width: 75%;
+  text-align: right;
+  padding-right: 40px;
+}

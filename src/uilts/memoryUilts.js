@@ -1,3 +1,4 @@
-export default {
+ const a={
 user:{}
 }
+export default a

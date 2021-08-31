@@ -4,7 +4,7 @@ import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import { Redirect, withRouter } from 'react-router-dom';
 import './index.less'
 import logo from './images/logo.png'
-import {reqLogin,reqAdd } from '../../api'
+import {reqLogin} from '../../api'
 import memoryUilts from '../../uilts/memoryUilts';
 import localStorageUilts from '../../uilts/localStorageUilts';
 
@@ -13,7 +13,7 @@ const NormalLoginForm = (props) => {
     try{
       const response=await reqLogin(values)
       const {status}=response.data
-      if(status==0){
+      if(status===0){
         message.success('登录成功')
         props.history.replace("/")
         memoryUilts.user=response.data.data
@@ -102,7 +102,7 @@ export default class Login extends Component {
             return (
                 <div className='login'>
                     <div className='login-header'>
-                        <img src={logo}></img>
+                        <img src={logo} alt='logo'></img>
                         <h1>React项目：后台管理系统</h1>
                     </div>
                     <div className='login-content'>
